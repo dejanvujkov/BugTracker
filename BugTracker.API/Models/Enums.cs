@@ -1,0 +1,1 @@
+public enum EmployeeType { TeamLeader = 1, Regular };
