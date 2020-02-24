@@ -45,8 +45,11 @@ namespace BugTracker.API.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Password")
-                        .HasColumnType("TEXT");
+                    b.Property<byte[]>("PasswordHash")
+                        .HasColumnType("BLOB");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .HasColumnType("BLOB");
 
                     b.Property<string>("Surname")
                         .HasColumnType("TEXT");
@@ -70,6 +73,15 @@ namespace BugTracker.API.Migrations
 
                     b.Property<int>("CompanyId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("StartingDate")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -100,6 +112,9 @@ namespace BugTracker.API.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Title")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("WorkerId")
                         .HasColumnType("INTEGER");
 
@@ -116,6 +131,9 @@ namespace BugTracker.API.Migrations
 
                     b.Property<int>("CompanyId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("ProjectId")
                         .HasColumnType("INTEGER");

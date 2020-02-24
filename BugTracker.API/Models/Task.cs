@@ -12,6 +12,7 @@ namespace BugTracker.API.Models
         public int GiverId { get; set; }
         public int PercentageDone { get; set; }
         public string Description { get; set; }
+        public string Title { get; set; }
 
     }
 }

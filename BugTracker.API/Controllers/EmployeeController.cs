@@ -1,11 +1,13 @@
 using System.Linq;
 using System.Threading.Tasks;
 using BugTracker.API.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace BugTracker.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class EmployeeController : ControllerBase
@@ -24,6 +26,7 @@ namespace BugTracker.API.Controllers
             return Ok(employees);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSingle(int id)
         {
@@ -31,7 +34,7 @@ namespace BugTracker.API.Controllers
             return Ok(employee);
         }
 
-        [HttpGet("{type}")]
+        [HttpGet("type/{type}")]
         public async Task<IActionResult> GetEmployeesFromType(EmployeeType type)
         {
             var employee = await _dataContext.Employees.Where(employee => employee.EmployeeType == type).ToListAsync();
