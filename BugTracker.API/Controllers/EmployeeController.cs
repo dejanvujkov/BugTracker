@@ -19,6 +19,7 @@ namespace BugTracker.API.Controllers
             this._dataContext = dataContext;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
