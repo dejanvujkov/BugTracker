@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">BugTracker</a>
+    <a class="navbar-brand" [routerLink]="['/home']">BugTracker</a>
     <ul class="navbar-nav mr-auto" *ngIf="loggedIn()">
-      <li class="nav-item">
-        <a class="nav-link" href="#">My Team</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/my-team']">My Team</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="-1">Tasks</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/tasks']" tabindex="-1">Tasks</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="-1">Messages</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/messages']" tabindex="-1">Messages</a>
       </li>
     </ul>
 
