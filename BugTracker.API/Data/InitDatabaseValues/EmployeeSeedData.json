@@ -1,0 +1,67 @@
+[
+    {
+        "Username": "Dee",
+        "Name": "Dee",
+        "Surname": "Ochoa",
+        "CompanyId": 2,
+        "EmployeeType": 1,
+        "Password": "asdqwe123",
+        "TeamId": 3,
+        "Company": {
+            "name": "Waab",
+            "description": "Fugiat irure magna dolor cillum in Lorem culpa dolor ea ex aute. Consequat qui qui cupidatat culpa cupidatat aliqua ex amet incididunt. Commodo dolore sit aliquip eu irure incididunt. Ut cupidatat eiusmod tempor deserunt sunt velit ut eiusmod esse ipsum aliqua.\r\n"
+        }
+    },
+    {
+        "Username": "Frances",
+        "Name": "Frances",
+        "Surname": "Norton",
+        "CompanyId": 4,
+        "Company": {
+            "name": "Ginkogene",
+            "description": "Nulla sunt pariatur enim ex ad anim enim ipsum pariatur veniam reprehenderit deserunt ullamco. Anim irure sint laborum sit consectetur officia sunt proident reprehenderit veniam officia in ea culpa. Nulla cillum magna labore eu exercitation quis eu cillum tempor culpa. Sint incididunt do exercitation magna qui occaecat.\r\n"
+        },
+        "EmployeeType": 1,
+        "Password": "asdqwe123",
+        "TeamId": 2
+    },
+    {
+        "Username": "Rowena",
+        "Name": "Rowena",
+        "Surname": "Gallagher",
+        "CompanyId": 2,
+        "Company": {
+            "name": "Waab",
+            "description": "Fugiat irure magna dolor cillum in Lorem culpa dolor ea ex aute. Consequat qui qui cupidatat culpa cupidatat aliqua ex amet incididunt. Commodo dolore sit aliquip eu irure incididunt. Ut cupidatat eiusmod tempor deserunt sunt velit ut eiusmod esse ipsum aliqua.\r\n"
+        },
+        "EmployeeType": 1,
+        "Password": "asdqwe123",
+        "TeamId": 1
+    },
+    {
+        "Username": "Gayle",
+        "Name": "Gayle",
+        "Surname": "Noble",
+        "CompanyId": 3,
+        "Company": {
+            "name": "Cablam",
+            "description": "Eu aliquip occaecat minim mollit. Veniam sunt consectetur anim sint ipsum. Fugiat et aute sit commodo. Ex ex minim eu sint consectetur adipisicing velit ut voluptate excepteur magna. Ipsum excepteur incididunt sunt tempor culpa excepteur.\r\n"
+        },
+        "EmployeeType": 1,
+        "Password": "asdqwe123",
+        "TeamId": 3
+    },
+    {
+        "Username": "Anna",
+        "Name": "Anna",
+        "Surname": "Rojas",
+        "CompanyId": 4,
+        "Company": {
+            "name": "Ginkogene",
+            "description": "Nulla sunt pariatur enim ex ad anim enim ipsum pariatur veniam reprehenderit deserunt ullamco. Anim irure sint laborum sit consectetur officia sunt proident reprehenderit veniam officia in ea culpa. Nulla cillum magna labore eu exercitation quis eu cillum tempor culpa. Sint incididunt do exercitation magna qui occaecat.\r\n"
+        },
+        "EmployeeType": 1,
+        "Password": "asdqwe123",
+        "TeamId": 2
+    }
+]

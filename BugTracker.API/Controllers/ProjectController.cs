@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using BugTracker.API.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
+using BugTracker.API.Interfaces;
+using AutoMapper;
+using BugTracker.API.Models.Dto;
 
 namespace BugTracker.API.Controllers
 {
@@ -10,25 +12,29 @@ namespace BugTracker.API.Controllers
     [Route("[controller]")]
     public class ProjectController : ControllerBase
     {
-        private readonly DataContext _dataContext;
+        private readonly IProjectRepository _repository;
+        private readonly IMapper _mapper;
 
-        public ProjectController(DataContext dataContext)
+        public ProjectController(IProjectRepository repository, IMapper mapper)
         {
-            this._dataContext = dataContext;
+            this._mapper = mapper;
+            this._repository = repository;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var projects = await _dataContext.Projects.ToListAsync();
-            return Ok(projects);
+            var projects = await _repository.GetAll();
+            var projectDtos = _mapper.Map<IEnumerable<ProjectDto>>(projects);
+            return Ok(projectDtos);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSingle(int id)
         {
-            var project = await _dataContext.Projects.SingleOrDefaultAsync(project => project.Id == id);
-            return Ok(project);
+            var project = await _repository.GetSingle(id);
+            var projectDto = _mapper.Map<ProjectDto>(project);
+            return Ok(projectDto);
         }
     }
 }

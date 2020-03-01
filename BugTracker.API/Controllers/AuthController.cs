@@ -36,6 +36,11 @@ namespace BugTracker.API.Controllers
             var employeeToCreate = new Employee()
             {
                 Username = registerDto.Username,
+                Name = registerDto.Name,
+                Surname = registerDto.Surname,
+                TeamId = registerDto.TeamId,
+                CompanyId = registerDto.CompanyId,
+                EmployeeType = registerDto.employeeType
             };
             var createdUser = await _repository.Register(employeeToCreate, registerDto.Password);
             return StatusCode(201);

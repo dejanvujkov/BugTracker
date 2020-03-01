@@ -1,0 +1,27 @@
+[
+    {
+        "Name": "Farmex",
+        "CompanyId": 1,
+        "StartingDate": "2016-02-04"
+    },
+    {
+        "Name": "Exozent",
+        "CompanyId": 4,
+        "StartingDate": "2015-07-08"
+    },
+    {
+        "Name": "Assurity",
+        "CompanyId": 4,
+        "StartingDate": "2015-02-07"
+    },
+    {
+        "Name": "Medicroix",
+        "CompanyId": 4,
+        "StartingDate": "2019-08-15"
+    },
+    {
+        "Name": "Zepitope",
+        "CompanyId": 1,
+        "StartingDate": "2019-07-18"
+    }
+]

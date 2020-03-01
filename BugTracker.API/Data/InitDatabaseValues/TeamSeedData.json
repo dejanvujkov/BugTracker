@@ -1,0 +1,27 @@
+[
+    {
+        "Name": "Team 0",
+        "CompanyId": 3,
+        "ProjectId": 3
+    },
+    {
+        "Name": "Team 1",
+        "CompanyId": 1,
+        "ProjectId": 2
+    },
+    {
+        "Name": "Team 2",
+        "CompanyId": 2,
+        "ProjectId": 1
+    },
+    {
+        "Name": "Team 3",
+        "CompanyId": 3,
+        "ProjectId": 4
+    },
+    {
+        "Name": "Team 4",
+        "CompanyId": 4,
+        "ProjectId": 2
+    }
+]
