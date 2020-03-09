@@ -43,6 +43,10 @@ namespace BugTracker.API.Migrations
                     b.Property<int>("CompanyId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("EmployeeType")
                         .HasColumnType("INTEGER");
 

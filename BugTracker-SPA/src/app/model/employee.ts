@@ -6,4 +6,5 @@ export class Employee {
     companyId: number;
     teamId: number;
     employeeType: EmployeeType;
+    email: string;
 }

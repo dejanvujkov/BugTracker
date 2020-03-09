@@ -27,7 +27,7 @@ namespace BugTracker.API.Implementation
 
         public async Task<IEnumerable<Models.Task>> GetTasksForCompany(int companyId)
         {
-            return await _context.Tasks.Include(p => p.Project).Where(p => p.Project.CompanyId == companyId).ToListAsync();
+            return await _context.Tasks.Include(p => p.Project).Include(w => w.Worker).Where(p => p.Project.CompanyId == companyId).ToListAsync();
         }
     }
 }

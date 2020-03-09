@@ -7,6 +7,7 @@ namespace BugTracker.API.Models.Dto
         public string Surname { get; set; }
         public string Username { get; set; }
         public Company Comapny { get; set; }
+        public string Email { get; set; }
         public int CompanyId { get; set; }
         public int? TeamId { get; set; }
         public EmployeeType EmployeeType { get; set; }

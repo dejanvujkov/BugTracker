@@ -24,12 +24,13 @@ export class TasksComponent implements OnInit {
   ngOnInit() {
     this.loadAllTaks();
   }
+
   loadAllTaks() {
     this.employeeService.getLoggedInUser().subscribe((employee: Employee) => {
       this.loggedInEmployee = employee;
-      // this.taskService.getTasksForCompany(this.loggedInEmployee.companyId).subscribe((tasks: Task[]) => {
-      //   this.tasks = tasks;
-      // }, error => this.alertify.error(error));
+      this.taskService.getTasksForCompany(this.loggedInEmployee.companyId).subscribe((tasks: Task[]) => {
+        this.tasks = tasks;
+      }, error => this.alertify.error(error));
     }, error => this.alertify.error(error));
   }
 

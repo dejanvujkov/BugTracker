@@ -1,3 +1,10 @@
-<p>
-  tasks works!
-</p>
+<div class="container">
+  <div class="card w-100 custom-top-margin" *ngFor="let tasks of tasks">
+    <div class="card-body">
+      <h5 class="card-title">{{tasks.id}} - {{tasks.title}}</h5>
+      <p class="card-text"><b>Description:</b>{{tasks.description}}</p>
+      <p class="card-text">Percentage done: {{tasks.percentageDone}}%</p>
+      <p class="card-text">Assignee: {{tasks.worker.name}} {{tasks.worker.surname}}</p>
+    </div>
+  </div>
+</div>

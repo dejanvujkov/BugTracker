@@ -13,6 +13,8 @@ namespace BugTracker.API.Models
         public string Username { get; set; }
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
+        [Required]
+        public string Email { get; set; }
         public Company Comapny { get; set; }
         [Required]
         public int CompanyId { get; set; }
