@@ -3,7 +3,10 @@
     <a class="navbar-brand" [routerLink]="['/home']">BugTracker</a>
     <ul class="navbar-nav mr-auto" *ngIf="loggedIn()">
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/my-team']">My Team</a>
+        <a class="nav-link" [routerLink]="['/projects']">Projects</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/teams']">Teams</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/tasks']" tabindex="-1">Tasks</a>

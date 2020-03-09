@@ -1,6 +1,7 @@
 import { appRoutes } from './routes';
 import { AuthService } from './services/auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { JwtModule } from '@auth0/angular-jwt';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -15,6 +16,8 @@ import { ErrorInterceptorProvider } from './services/error.interceptor';
 import { MyTeamComponent } from './my-team/my-team.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { MessagesComponent } from './messages/messages.component';
+import { ProjectsComponent } from './projects/projects.component';
+
 
 
 @NgModule({
@@ -25,7 +28,8 @@ import { MessagesComponent } from './messages/messages.component';
       RegisterComponent,
       MyTeamComponent,
       TasksComponent,
-      MessagesComponent
+      MessagesComponent,
+      ProjectsComponent
    ],
    imports: [
       BrowserModule,
@@ -33,6 +37,13 @@ import { MessagesComponent } from './messages/messages.component';
       FormsModule,
       BrowserAnimationsModule,
       BsDropdownModule.forRoot(),
+      JwtModule.forRoot({
+         config: {
+            tokenGetter: tokenGetter,
+            whitelistedDomains: ['localhost:5000'],
+            blacklistedRoutes: ['localhost:5000/auth']
+         }
+      }),
       RouterModule.forRoot(appRoutes)
    ],
    providers: [
@@ -44,3 +55,7 @@ import { MessagesComponent } from './messages/messages.component';
    ]
 })
 export class AppModule { }
+
+export function tokenGetter() {
+   return localStorage.getItem('token');
+}

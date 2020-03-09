@@ -2,26 +2,31 @@
     {
         "Name": "Farmex",
         "CompanyId": 1,
-        "StartingDate": "2016-02-04"
+        "StartingDate": "2016-02-04",
+        "Description": "Description of Farmex"
     },
     {
         "Name": "Exozent",
         "CompanyId": 4,
-        "StartingDate": "2015-07-08"
+        "StartingDate": "2015-07-08",
+        "Description": "Description of Exozent"
     },
     {
         "Name": "Assurity",
         "CompanyId": 4,
-        "StartingDate": "2015-02-07"
+        "StartingDate": "2015-02-07",
+        "Description": "Description of Assurity"
     },
     {
         "Name": "Medicroix",
         "CompanyId": 4,
-        "StartingDate": "2019-08-15"
+        "StartingDate": "2019-08-15",
+        "Description": "Description of Mediocroix"
     },
     {
         "Name": "Zepitope",
         "CompanyId": 1,
-        "StartingDate": "2019-07-18"
+        "StartingDate": "2019-07-18",
+        "Description": "Description of Zeptiotope"
     }
 ]

@@ -8,5 +8,6 @@ namespace BugTracker.API.Interfaces
     {
         Task<Models.Task> GetSingle(int id);
         Task<IEnumerable<Models.Task>> GetAll();
+        Task<IEnumerable<Models.Task>> GetTasksForCompany(int companyId);
     }
 }

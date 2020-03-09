@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   registerMode = false;
 
   constructor(
-    private http: HttpClient,
     private authService: AuthService) { }
 
   ngOnInit() {

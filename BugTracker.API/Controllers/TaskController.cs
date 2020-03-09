@@ -38,5 +38,13 @@ namespace BugTracker.API.Controllers
             var taskDto = _mapper.Map<TaskDto>(task);
             return Ok(taskDto);
         }
+
+        [HttpGet("company/{companyId}")]
+        public async Task<IActionResult> GetTasksForCompany(int companyId)
+        {
+            var tasks = await _repository.GetTasksForCompany(companyId);
+            var tasksDto = _mapper.Map<IEnumerable<TaskDto>>(tasks);
+            return Ok(tasksDto);
+        }
     }
 }

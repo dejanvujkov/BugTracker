@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BugTracker.API.Controllers
 {
-    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class CompanyController : ControllerBase

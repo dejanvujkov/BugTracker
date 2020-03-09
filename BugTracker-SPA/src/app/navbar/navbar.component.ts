@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
   login() {
     this.authService.login(this.model).subscribe(next => {
       this.alertifyService.success('Login Successful');
-      this.router.navigate(['/my-tasks']);
+      this.router.navigate(['/projects']);
     }, error => {
       this.alertifyService.error('Failed to Login');
     });

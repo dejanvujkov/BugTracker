@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="card w-100 custom-top-margin" *ngFor="let project of projects">
+    <div class="card-body">
+      <h5 class="card-title">{{project.id}} - {{project.name}}</h5>
+      <p class="card-text">{{project.description}}</p>
+      <a class="btn btn-primary">Tasks</a>
+      <!--TODO: add router here-->
+    </div>
+  </div>
+</div>

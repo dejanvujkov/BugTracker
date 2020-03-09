@@ -14,6 +14,8 @@ namespace BugTracker.API.Models
         [Required]
         public DateTime StartingDate { get; set; }
         public DateTime DueDate { get; set; }
+        [Required]
+        public string Description { get; set; }
 
     }
 }

@@ -1,3 +1,4 @@
+import { ProjectsComponent } from './projects/projects.component';
 import { AuthGuard } from './guard/auth.guard';
 import { MessagesComponent } from './messages/messages.component';
 import { TasksComponent } from './tasks/tasks.component';
@@ -12,9 +13,13 @@ export const appRoutes: Routes = [
         runGuardsAndResolvers: 'always',
         canActivate: [AuthGuard],
         children: [
-            { path: 'my-team', component: MyTeamComponent, },
+            { path: 'teams', component: MyTeamComponent, },
             { path: 'tasks', component: TasksComponent, },
+            { path: 'tasks/:id', component: TasksComponent, },
             { path: 'messages', component: MessagesComponent, },
+            { path: 'projects', component: ProjectsComponent, },
+            { path: 'projects/:id', component: ProjectsComponent, },
+
         ]
     },
 

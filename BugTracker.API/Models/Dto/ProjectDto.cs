@@ -10,5 +10,6 @@ namespace BugTracker.API.Models.Dto
         public string Name { get; set; }
         public DateTime StartingDate { get; set; }
         public DateTime DueDate { get; set; }
+        public string Description { get; set; }
     }
 }

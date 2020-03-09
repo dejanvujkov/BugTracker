@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using BugTracker.API.Data;
 using BugTracker.API.Interfaces;
@@ -22,6 +23,11 @@ namespace BugTracker.API.Implementation
         public async Task<Models.Task> GetSingle(int id)
         {
             return await _context.Tasks.Include(p => p.Project).Include(e => e.Worker).FirstOrDefaultAsync(t => t.Id == id);
+        }
+
+        public async Task<IEnumerable<Models.Task>> GetTasksForCompany(int companyId)
+        {
+            return await _context.Tasks.Include(p => p.Project).Where(p => p.Project.CompanyId == companyId).ToListAsync();
         }
     }
 }
