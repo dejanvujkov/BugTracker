@@ -27,7 +27,6 @@ namespace BugTracker.API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto registerDto)
         {
-
             registerDto.Username = registerDto.Username.ToLower();
             if (await _repository.UserExists(registerDto.Username))
             {
@@ -40,6 +39,7 @@ namespace BugTracker.API.Controllers
                 Surname = registerDto.Surname,
                 TeamId = registerDto.TeamId,
                 CompanyId = registerDto.CompanyId,
+                Email = registerDto.Email,
                 EmployeeType = registerDto.employeeType
             };
             var createdUser = await _repository.Register(employeeToCreate, registerDto.Password);

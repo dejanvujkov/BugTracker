@@ -46,7 +46,7 @@ namespace BugTracker.API.Data
 
             if (!context.Employees.Any())
             {
-                var employeeData = File.ReadAllText("Data/EmployeeSeedData.json");
+                var employeeData = File.ReadAllText("Data/InitDatabaseValues/EmployeeSeedData.json");
                 var employees = JsonConvert.DeserializeObject<List<Employee>>(employeeData);
                 foreach (var employee in employees)
                 {
