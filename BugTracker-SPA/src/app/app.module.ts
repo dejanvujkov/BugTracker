@@ -18,8 +18,6 @@ import { TasksComponent } from './tasks/tasks.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ProjectsComponent } from './projects/projects.component';
 
-
-
 @NgModule({
    declarations: [
       AppComponent,
