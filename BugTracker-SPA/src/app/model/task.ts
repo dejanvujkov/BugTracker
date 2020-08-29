@@ -1,3 +1,4 @@
+import { TaskStatus } from './task-status.enum';
 import { Project } from './project';
 import { Employee } from './employee';
 export class Task {
@@ -12,4 +13,5 @@ export class Task {
     percentageDone: number;
     description: string;
     title: string;
+    status: TaskStatus;
 }

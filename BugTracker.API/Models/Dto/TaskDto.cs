@@ -15,5 +15,6 @@ namespace BugTracker.API.Models.Dto
         public int PercentageDone { get; set; }
         public string Description { get; set; }
         public string Title { get; set; }
+        public TaskStatus Status { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-import { EmployeeType } from './employeeType.enum';
+import { EmployeeType } from './employee-type.enum';
 export class Employee {
     id: number;
     name: string;

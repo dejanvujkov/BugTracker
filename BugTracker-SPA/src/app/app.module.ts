@@ -1,5 +1,7 @@
+import { ProjectTasksComponent } from './project-tasks/project-tasks.component';
 import { appRoutes } from './routes';
 import { AuthService } from './services/auth.service';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { JwtModule } from '@auth0/angular-jwt';
 import { BsDropdownModule } from 'ngx-bootstrap';
@@ -17,6 +19,7 @@ import { MyTeamComponent } from './my-team/my-team.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 @NgModule({
    declarations: [
@@ -27,10 +30,13 @@ import { ProjectsComponent } from './projects/projects.component';
       MyTeamComponent,
       TasksComponent,
       MessagesComponent,
-      ProjectsComponent
+      ProjectsComponent,
+      ProjectTasksComponent,
+      ProjectDetailsComponent,
    ],
    imports: [
       BrowserModule,
+      DragDropModule,
       HttpClientModule,
       FormsModule,
       BrowserAnimationsModule,

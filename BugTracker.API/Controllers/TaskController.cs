@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using BugTracker.API.Data;
@@ -45,6 +46,25 @@ namespace BugTracker.API.Controllers
             var tasks = await _repository.GetTasksForCompany(companyId);
             var tasksDto = _mapper.Map<IEnumerable<TaskDto>>(tasks);
             return Ok(tasksDto);
+        }
+
+        [HttpGet("projectId/{projectId}")]
+        public async Task<IActionResult> GetTasksForProject(int projectId)
+        {
+            var tasks = await _repository.GetTasksForProject(projectId);
+            var tasksDto = _mapper.Map<IEnumerable<TaskDto>>(tasks);
+            return Ok(tasksDto);
+        }
+
+        [HttpPut("")]
+        public async Task<IActionResult> UpdateTask([FromBody] Models.Task task)
+        {
+            if (await _repository.Update(task) > 0)
+            {
+                return Ok(task);
+            }
+            return NoContent();
+
         }
     }
 }

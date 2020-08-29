@@ -23,10 +23,10 @@ export class ProjectsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.loadProjects();
+    this.loadAllProjectsForCompany();
   }
 
-  loadProjects() {
+  loadAllProjectsForCompany() {
     this.employeeService.getLoggedInUser().subscribe((employee: Employee) => {
       this.loggedInEmployee = employee;
       this.projectService.getProjectsForComapny(this.loggedInEmployee.companyId).subscribe((projects: Project[]) => {

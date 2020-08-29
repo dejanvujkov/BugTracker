@@ -21,6 +21,7 @@ namespace BugTracker.API.Models
         public string Description { get; set; }
         [Required]
         public string Title { get; set; }
+        public TaskStatus Status { get; set; }
 
     }
 }

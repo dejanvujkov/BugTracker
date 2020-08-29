@@ -18,4 +18,12 @@ export class TaskService {
     return this.http.get<Task[]>(this.baseUrl + 'company/' + companyId);
   }
 
+  getTasksForProject(projectId: number): Observable<Task[]> {
+    return this.http.get<Task[]>(this.baseUrl + 'projectId/' + projectId);
+  }
+
+  update(task: Task): Observable<Task> {
+    return this.http.put<Task>(this.baseUrl, task);
+  }
+
 }

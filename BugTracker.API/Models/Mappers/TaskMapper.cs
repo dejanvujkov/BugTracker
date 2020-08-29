@@ -8,6 +8,10 @@ namespace BugTracker.API.Models.Mappers
         public TaskMapper()
         {
             CreateMap<Task, TaskDto>();
+            CreateMap<TaskDto, Task>();
+
+            CreateMap<TaskDto, Models.Task>();
+            CreateMap<Models.Task, TaskDto>();
         }
     }
 }

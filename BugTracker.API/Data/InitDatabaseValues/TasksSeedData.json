@@ -6,6 +6,7 @@
         "WorkerId": 2,
         "GiverId": 2,
         "PercentageDone": 83,
+        "Status": 2,
         "Description": "Aliqua do nulla consequat culpa velit. Nisi ut nostrud enim do duis tempor culpa labore esse. Velit deserunt amet aliqua cupidatat do excepteur cillum cupidatat Lorem consectetur aute magna sunt. In in culpa laborum nisi culpa ad consectetur. Proident excepteur ex nostrud quis ipsum adipisicing ex excepteur dolor et qui. Veniam labore commodo quis occaecat tempor tempor id adipisicing fugiat nostrud commodo incididunt sint. Est eiusmod sunt nisi laborum reprehenderit consequat irure magna duis.\r\n"
     },
     {
@@ -14,7 +15,8 @@
         "StartDate": "2019-05-31",
         "WorkerId": 3,
         "GiverId": 3,
-        "PercentageDone": 5,
+        "PercentageDone": 0,
+        "Status": 1,
         "Description": "Et magna cillum aute incididunt labore labore anim irure deserunt consectetur in incididunt est aliquip. In minim ut excepteur proident proident aliqua irure pariatur voluptate Lorem. Reprehenderit dolore laboris esse voluptate do dolore. Elit commodo commodo deserunt qui non nisi nostrud ullamco exercitation. Labore duis cupidatat commodo minim proident nostrud.\r\n"
     },
     {
@@ -24,6 +26,7 @@
         "WorkerId": 3,
         "GiverId": 1,
         "PercentageDone": 31,
+        "Status": 2,
         "Description": "Veniam voluptate aute voluptate laborum incididunt reprehenderit enim excepteur. Pariatur qui elit non eiusmod ex et tempor culpa enim ex voluptate. Anim laborum culpa irure eiusmod sint mollit elit ea reprehenderit. Aliquip deserunt sunt cillum tempor amet nisi cillum exercitation consequat ut tempor amet laborum magna.\r\n"
     },
     {
@@ -33,6 +36,7 @@
         "WorkerId": 2,
         "GiverId": 2,
         "PercentageDone": 36,
+        "Status": 2,
         "Description": "Sit magna occaecat laborum fugiat officia dolor consectetur quis enim exercitation dolore consequat pariatur. Eu duis irure laborum deserunt commodo ullamco occaecat qui incididunt in minim Lorem. Ad excepteur cillum eiusmod culpa. Reprehenderit do cillum reprehenderit excepteur ut nulla consectetur sunt Lorem in eu mollit et aliquip. Culpa exercitation irure reprehenderit pariatur ullamco culpa do Lorem qui amet est ad do ut. Incididunt commodo cillum non velit occaecat.\r\n"
     },
     {
@@ -42,6 +46,7 @@
         "WorkerId": 2,
         "GiverId": 1,
         "PercentageDone": 86,
+        "Status": 2,
         "Description": "Cupidatat elit ea ipsum do elit culpa labore est sunt cillum. Minim quis mollit officia culpa ut ea deserunt ut commodo cupidatat laborum voluptate. Id ad do aute amet sint veniam eu qui. Incididunt labore magna nulla ad elit minim pariatur ex et incididunt velit nisi sint duis.\r\n"
     }
 ]

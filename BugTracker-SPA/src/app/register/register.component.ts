@@ -1,4 +1,4 @@
-import { EmployeeType } from './../model/employeeType.enum';
+import { EmployeeType } from './../model/employee-type.enum';
 import { Observable } from 'rxjs';
 import { Company } from './../model/company';
 import { CompanyService } from './../services/company.service';

@@ -1,3 +1,5 @@
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { ProjectTasksComponent } from './project-tasks/project-tasks.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AuthGuard } from './guard/auth.guard';
 import { MessagesComponent } from './messages/messages.component';
@@ -18,7 +20,8 @@ export const appRoutes: Routes = [
             { path: 'tasks/:id', component: TasksComponent, },
             { path: 'messages', component: MessagesComponent, },
             { path: 'projects', component: ProjectsComponent, },
-            { path: 'projects/:id', component: ProjectsComponent, },
+            { path: 'projects/:id/tasks', component: ProjectTasksComponent, },
+            { path: 'projects/:id', component: ProjectDetailsComponent, },
 
         ]
     },
