@@ -27,7 +27,7 @@ namespace BugTracker.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var tasks = await _repository.GetAll();
+            var tasks = await _repository.GetAll(User.Identity.Name);
             var tasksDto = _mapper.Map<IEnumerable<TaskDto>>(tasks);
             return Ok(tasksDto);
         }
@@ -38,14 +38,6 @@ namespace BugTracker.API.Controllers
             var task = await _repository.GetSingle(id);
             var taskDto = _mapper.Map<TaskDto>(task);
             return Ok(taskDto);
-        }
-
-        [HttpGet("company/{companyId}")]
-        public async Task<IActionResult> GetTasksForCompany(int companyId)
-        {
-            var tasks = await _repository.GetTasksForCompany(companyId);
-            var tasksDto = _mapper.Map<IEnumerable<TaskDto>>(tasks);
-            return Ok(tasksDto);
         }
 
         [HttpGet("projectId/{projectId}")]

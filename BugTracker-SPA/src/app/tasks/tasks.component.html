@@ -1,10 +1,23 @@
 <div class="container">
-  <div class="card w-100 custom-top-margin" *ngFor="let tasks of tasks">
-    <div class="card-body">
-      <h5 class="card-title">{{tasks.id}} - {{tasks.title}}</h5>
-      <p class="card-text"><b>Description:</b>{{tasks.description}}</p>
-      <p class="card-text">Percentage done: {{tasks.percentageDone}}%</p>
-      <p class="card-text">Assignee: {{tasks.worker.name}} {{tasks.worker.surname}}</p>
-    </div>
-  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Status</th>
+        <th scope="col">% Done</th>
+        <th scope="col">Assignee</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let task of tasks">
+      <tr [routerLink]="[task.id]" style="cursor: pointer;">
+        <th scope="row">{{task.id}}</th>
+        <td>{{task.title}}</td>
+        <td>{{task.status}}</td>
+        <td>{{task.percentageDone}}%</td>
+        <td>{{task.worker.name}} {{task.worker.surname}}</td>
+      </tr>
+    </tbody>
+
+</table>
 </div>

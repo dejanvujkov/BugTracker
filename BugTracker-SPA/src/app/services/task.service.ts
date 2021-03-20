@@ -14,8 +14,8 @@ export class TaskService {
     private http: HttpClient
   ) { }
 
-  getTasksForCompany(companyId: number): Observable<Task[]> {
-    return this.http.get<Task[]>(this.baseUrl + 'company/' + companyId);
+  getTasksForUsersCompany(): Observable<Task[]> {
+    return this.http.get<Task[]>(this.baseUrl);
   }
 
   getTasksForProject(projectId: number): Observable<Task[]> {

@@ -13,15 +13,17 @@ namespace BugTracker.API.Implementation
     {
         private readonly DataContext _context;
         private readonly IMapper _mapper;
-        public TaskRepository(DataContext context, IMapper mapper)
+        private readonly IEmployeeRepository employeeRepository;
+        public TaskRepository(DataContext context, IMapper mapper, IEmployeeRepository employeeRepository)
         {
             this._context = context;
             _mapper = mapper;
-
+            this.employeeRepository = employeeRepository;
         }
-        public async Task<IEnumerable<Models.Task>> GetAll()
+        public async Task<IEnumerable<Models.Task>> GetAll(string username)
         {
-            return await _context.Tasks.Include(p => p.Project).Include(e => e.Worker).ToListAsync();
+            var companyId = employeeRepository.GetEmployeeByUsername(username).Result.CompanyId;
+            return await _context.Tasks.Where(x => x.Project.CompanyId == companyId).Include(p => p.Project).Include(e => e.Worker).ToListAsync();
         }
 
         public async Task<Models.Task> GetSingle(int id)

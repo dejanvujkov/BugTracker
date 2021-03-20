@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using BugTracker.API.Interfaces;
 using AutoMapper;
 using BugTracker.API.Models.Dto;
+using BugTracker.API.Models;
 
 namespace BugTracker.API.Controllers
 {
@@ -37,12 +38,27 @@ namespace BugTracker.API.Controllers
             return Ok(projectDto);
         }
 
-        [HttpGet("company/{companyId}")]
-        public async Task<IActionResult> GetProjectsForCompany(int companyId)
+        [HttpGet("getProjectsForUser")]
+        public async Task<IActionResult> GetProjectsForCompany()
         {
-            var project = await _repository.GetProjectsForCompany(companyId);
+            var project = await _repository.GetProjectsForUsersCompany(User.Identity.Name);
             var projectDto = _mapper.Map<IEnumerable<ProjectDto>>(project);
             return Ok(projectDto);
+        }
+
+        [HttpPut()]
+        public async Task<IActionResult> UpdateProject(Project project)
+        {
+            var updatedProject = await _repository.UpdateProject(project);
+            var updatedProjectDto = _mapper.Map<ProjectDto>(updatedProject);
+            return Ok(updatedProjectDto);
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteProject(int projectId)
+        {
+            await _repository.DeleteProject(projectId);
+            return Ok();
         }
     }
 }

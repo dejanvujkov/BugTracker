@@ -6,6 +6,7 @@ namespace BugTracker.API.Interfaces
 {
     public interface IEmployeeRepository
     {
+        Task<Employee> GetEmployeeByUsername(string username);
         Task<Employee> GetSingle(int id);
         Task<IEnumerable<Employee>> GetAll();
     }

@@ -1,26 +1,29 @@
-<form #detailsForm="ngForm" (ngSubmit)="update()">
-    <h2 class="text-center text-primary">Project {{project.id}}</h2>
+<div *ngIf="project">
+
+  <form #detailsForm="ngForm" (ngSubmit)="update()">
+    <h2 class="text-center text-primary">Project #{{project?.id}}</h2>
     <hr>
 
     <div class="form-group">
-        <input type="text" class="form-control" required name="Name" [(ngModel)]="project.name">
+      <input type="text" class="form-control" required name="Name" [(ngModel)]="project.name">
     </div>
 
     <div class="form-group">
-        <input type="text" class="form-control" required name="startingDate" [(ngModel)]="project.startingDate">
+      <input type="text" class="form-control" required name="startingDate" [(ngModel)]="project.startingDate">
     </div>
 
     <div class="form-group">
-        <input type="text" class="form-control" required name="dueDate" [(ngModel)]="project.dueDate">
+      <input type="text" class="form-control" required name="dueDate" [(ngModel)]="project.dueDate">
     </div>
 
     <div class="form-group">
-        <input type="text" class="form-control" required name="description" [(ngModel)]="project.description">
+      <input type="text" class="form-control" required name="description" [(ngModel)]="project.description">
     </div>
 
     <div class="form-group text-center">
-        <button class="btn btn-success" type="submit">Save</button>
-        <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+      <button class="btn btn-success" type="submit">Save</button>
+      <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
     </div>
 
-</form>
+  </form>
+</div>

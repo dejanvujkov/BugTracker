@@ -27,12 +27,11 @@ export class ProjectsComponent implements OnInit {
   }
 
   loadAllProjectsForCompany() {
-    this.employeeService.getLoggedInUser().subscribe((employee: Employee) => {
-      this.loggedInEmployee = employee;
-      this.projectService.getProjectsForComapny(this.loggedInEmployee.companyId).subscribe((projects: Project[]) => {
-        this.projects = projects;
-      }, error => this.alertify.error(error));
-    }, error => this.alertify.error(error));
+    this.projectService.getProjectsForUsersCompany().subscribe((projects: Project[]) => {
+      this.projects = projects;
+    }, error => {
+      this.alertify.error('Error getting Projects for company');
+    });
   }
 
 

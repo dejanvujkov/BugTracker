@@ -25,5 +25,10 @@ namespace BugTracker.API.Implementation
             return await _context.Employees.Include(c => c.Comapny).FirstOrDefaultAsync(e => e.Id == id);
         }
 
+        public async Task<Employee> GetEmployeeByUsername(string username)
+        {
+            return await _context.Employees.Include(c => c.Comapny).FirstOrDefaultAsync(e => e.Username.ToLower() == username);
+        }
+
     }
 }

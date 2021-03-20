@@ -13,7 +13,7 @@ export class ProjectDetailsComponent implements OnInit {
   project: Project;
 
   constructor(
-    private pojectService: ProjectService,
+    private projectService: ProjectService,
     private alertify: AlertifyService,
     private route: ActivatedRoute) { }
 
@@ -22,19 +22,28 @@ export class ProjectDetailsComponent implements OnInit {
   }
 
   loadProject(id: number) {
-    this.pojectService.getProject(id).subscribe((loadedProject: Project) => {
+    this.projectService.getProject(id).subscribe((loadedProject: Project) => {
       this.project = loadedProject;
     }, error => {
       this.alertify.error('Error loading project');
     });
   }
 
+  create() {
+
+  }
+
   update() {
-    // TODO: update project on click
+    this.projectService.update(this.project).subscribe((updatedProject: Project) => {
+      this.project = updatedProject;
+      this.alertify.success('Project updated successfully');
+    }, error => {
+      this.alertify.error('Error updating project');
+    });
   }
 
   cancel() {
-    // TODO: cancel changes and restore previous values
+    this.loadProject(this.route.snapshot.params.id);
   }
 
 }

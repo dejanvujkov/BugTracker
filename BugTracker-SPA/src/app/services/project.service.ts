@@ -10,9 +10,13 @@ import { Project } from '../model/project';
 })
 export class ProjectService {
 
+  constructor(private http: HttpClient) { }
+
   baseUrl = environment.apiUrl + 'project/';
 
-  constructor(private http: HttpClient) { }
+  update(project: Project): Observable<Project> {
+    return this.http.put<Project>(this.baseUrl, project);
+  }
 
   getProjects(): Observable<Project[]> {
     return this.http.get<Project[]>(this.baseUrl);
@@ -24,6 +28,10 @@ export class ProjectService {
 
   getProjectsForComapny(companyId: number): Observable<Project[]> {
     return this.http.get<Project[]>(this.baseUrl + 'company/' + companyId);
+  }
+
+  getProjectsForUsersCompany(): Observable<Project[]> {
+    return this.http.get<Project[]>(this.baseUrl + 'getProjectsForUser');
   }
 
 }

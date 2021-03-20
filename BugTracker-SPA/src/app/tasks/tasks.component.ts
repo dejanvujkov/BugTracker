@@ -12,11 +12,9 @@ import { Task } from '../model/task';
 })
 export class TasksComponent implements OnInit {
 
-  loggedInEmployee: Employee;
   tasks: Task[];
 
   constructor(
-    private employeeService: EmployeeService,
     private alertify: AlertifyService,
     private taskService: TaskService
   ) { }
@@ -26,11 +24,8 @@ export class TasksComponent implements OnInit {
   }
 
   loadAllTaks() {
-    this.employeeService.getLoggedInUser().subscribe((employee: Employee) => {
-      this.loggedInEmployee = employee;
-      this.taskService.getTasksForCompany(this.loggedInEmployee.companyId).subscribe((tasks: Task[]) => {
-        this.tasks = tasks;
-      }, error => this.alertify.error(error));
+    this.taskService.getTasksForUsersCompany().subscribe((tasks: Task[]) => {
+      this.tasks = tasks;
     }, error => this.alertify.error(error));
   }
 
