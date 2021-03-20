@@ -20,6 +20,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { MessagesComponent } from './messages/messages.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { TaskDetailsComponent } from './task-details/task-details.component';
 
 @NgModule({
    declarations: [
@@ -33,6 +34,7 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
       ProjectsComponent,
       ProjectTasksComponent,
       ProjectDetailsComponent,
+      TaskDetailsComponent,
    ],
    imports: [
       BrowserModule,

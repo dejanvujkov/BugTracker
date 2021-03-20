@@ -26,4 +26,8 @@ export class TaskService {
     return this.http.put<Task>(this.baseUrl, task);
   }
 
+  getSingleTask(id: number): Observable<Task> {
+    return this.http.get<Task>(this.baseUrl + id);
+  }
+
 }

@@ -1,0 +1,24 @@
+<form #detailsForm="ngForm" *ngIf="task">
+  <div class="header">
+    <button class="btn btn-secondary btn-sm" routerLink="..">Back</button>
+    <h2 class="text-center text-primary">Task #{{task?.id}}</h2>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" required name="Title" [(ngModel)]="task.title">
+  </div>
+  <div class="form-group">
+    <textarea type="text" class="form-control" required name="Description" [(ngModel)]="task.description"></textarea>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" required name="Start Date" [(ngModel)]="task.startDate">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" required name="Due Date" [(ngModel)]="task.dueDate">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" required name="% Done" [(ngModel)]="task.percentageDone">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" required name="Assignee" [(ngModel)]="task.worker">
+  </div>
+</form>

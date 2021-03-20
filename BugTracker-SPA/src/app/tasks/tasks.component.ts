@@ -13,6 +13,7 @@ import { Task } from '../model/task';
 export class TasksComponent implements OnInit {
 
   tasks: Task[];
+  detailTask: Task;
 
   constructor(
     private alertify: AlertifyService,

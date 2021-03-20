@@ -1,3 +1,4 @@
+import { TaskDetailsComponent } from './task-details/task-details.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { ProjectTasksComponent } from './project-tasks/project-tasks.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -17,7 +18,7 @@ export const appRoutes: Routes = [
         children: [
             { path: 'teams', component: MyTeamComponent, },
             { path: 'tasks', component: TasksComponent, },
-            { path: 'tasks/:id', component: TasksComponent, },
+            { path: 'tasks/:id', component: TaskDetailsComponent, },
             { path: 'messages', component: MessagesComponent, },
             { path: 'projects', component: ProjectsComponent, },
             { path: 'projects/:id/tasks', component: ProjectTasksComponent, },

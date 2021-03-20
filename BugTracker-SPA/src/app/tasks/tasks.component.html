@@ -1,5 +1,5 @@
 <div class="container">
-  <table class="table table-hover">
+  <table class="table table-hover" *ngIf="!detailTask">
     <thead>
       <tr>
         <th scope="col">Id</th>
@@ -18,6 +18,5 @@
         <td>{{task.worker.name}} {{task.worker.surname}}</td>
       </tr>
     </tbody>
-
-</table>
+  </table>
 </div>

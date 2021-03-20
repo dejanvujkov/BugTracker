@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 50px;
+}
+
+.header button {
+  height: 30px;
+  display: flex;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.header h2 {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
