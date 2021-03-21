@@ -1,6 +1,6 @@
 <form #detailsForm="ngForm" *ngIf="task">
   <div class="header">
-    <button class="btn btn-secondary btn-sm" routerLink="..">Back</button>
+    <button class="btn btn-secondary btn-sm" (click)="goBack()">Back</button>
     <h2 class="text-center text-primary">Task #{{task?.id}}</h2>
   </div>
   <div class="form-group">

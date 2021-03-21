@@ -21,47 +21,54 @@ import { MessagesComponent } from './messages/messages.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { TaskDetailsComponent } from './task-details/task-details.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      NavbarComponent,
-      HomeComponent,
-      RegisterComponent,
-      MyTeamComponent,
-      TasksComponent,
-      MessagesComponent,
-      ProjectsComponent,
-      ProjectTasksComponent,
-      ProjectDetailsComponent,
-      TaskDetailsComponent,
-   ],
-   imports: [
-      BrowserModule,
-      DragDropModule,
-      HttpClientModule,
-      FormsModule,
-      BrowserAnimationsModule,
-      BsDropdownModule.forRoot(),
-      JwtModule.forRoot({
-         config: {
-            tokenGetter: tokenGetter,
-            whitelistedDomains: ['localhost:5000'],
-            blacklistedRoutes: ['localhost:5000/auth']
-         }
-      }),
-      RouterModule.forRoot(appRoutes)
-   ],
-   providers: [
-      AuthService,
-      ErrorInterceptorProvider
-   ],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    RegisterComponent,
+    MyTeamComponent,
+    TasksComponent,
+    MessagesComponent,
+    ProjectsComponent,
+    ProjectTasksComponent,
+    ProjectDetailsComponent,
+    TaskDetailsComponent,
+  ],
+  imports: [
+    BrowserModule,
+    DragDropModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: ['localhost:5000'],
+        blacklistedRoutes: ['localhost:5000/auth']
+      }
+    }),
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    RouterModule.forRoot(appRoutes)
+  ],
+  providers: [
+    AuthService,
+    MatDatepickerModule,
+    ErrorInterceptorProvider,
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }
 
 export function tokenGetter() {
-   return localStorage.getItem('token');
+  return localStorage.getItem('token');
 }
